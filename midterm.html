@@ -118,54 +118,25 @@
   <div class="large-7 columns">
     <div class="panel">
       <div class="row">
+      <header id="calendarHeader">Week of CURRENT WEEK GOES HERE</header>
 
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
+        <div class="large-3 columns" id="calendarDate">
+          <p>DATE</p>
         </div>
 
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
+        <div class="large-3 columns" id="calendarGiver">
+          <p>GIVER</p>
         </div>
 
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
+        <div class="large-3 columns" id="calendarFood">
+          <p>FOOD</p>
         </div>
 
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
-
-        <div class="large-3 columns end">
-          <img src="http://placehold.it/600x500&text=Thumbnail">
-        </div>
+        
+        <!-- <div class="large-3 columns end">
+          <p>TEST12</p>
+        </div> -->
+        <button type="button" id="calendarButton">View more dates</button>
       </div>
     </div>
 
@@ -213,7 +184,7 @@
     </div>
   </div>
 </footer>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
 <script src='foundation/js/foundation.min.js'></script>
 <script>
 $(document).foundation();
@@ -221,5 +192,7 @@ $(document).foundation();
 var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 </script>
+<script type="text/javascript" src="date.js"></script>
 </body>
+
 </html>

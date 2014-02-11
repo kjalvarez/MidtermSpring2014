@@ -5072,5 +5072,13 @@ th.hide-for-touch {
   text-align: center;
 }
 
+#calendarHeader {
+  padding: 10px;
+}
+
+#calendarButton {
+  padding: 2%;
+}
+
 
 
