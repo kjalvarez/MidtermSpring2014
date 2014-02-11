@@ -1,3 +1,22 @@
+$(document).on('ready', function() {
+
+var date = {
+	currentWeek: 'Ee by gum. Nobbut a lad. Tha daft apeth. Nobbut a lad nobbut a lad mardy',
+}
+
+var source = $('#calendarData').html();
+var template=Handlebars.compile(source);
+
+var newDiv=template(date);
+
+FIGURE OUT HOW TO PUT A DATE IN CURRENT WEEK AREA
+
+
+
+
+
+
+
 var appointment = function(firstName, lastName, foodItem, container, month, day, year) {
 	this.firstName= firstName;
 	this.lastName=lastName;
@@ -8,5 +27,3 @@ var appointment = function(firstName, lastName, foodItem, container, month, day,
 	this.year=year;
 
 }
-
-var firstAppt = new appointment('Karin', 'Smith', 'Lasagna', 'Blue Tupperware', 03, 23, 14)
