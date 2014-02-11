@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="foundation/css/foundation.css">
   <link rel="stylesheet" type="text/css" href="foundation/css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
   
   <title>Demo</title>
 </head>
@@ -15,7 +16,7 @@
     <li class="name">
       <h1>
         <a href="#">
-          Top Bar Title
+          Care to Give
         </a>
       </h1>
     </li>
@@ -25,9 +26,9 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="divider"></li>
+      <!-- <li class="divider"></li> -->
       <li class="has-dropdown">
-        <a href="#">Main Item 1</a>
+        <!-- <a href="#">Main Item 1</a> -->
         <ul class="dropdown">
           <li><label>Section Name</label></li>
           <li class="has-dropdown">
@@ -53,16 +54,15 @@
         </ul>
       </li>
       <li class="divider"></li>
-      <li><a href="#">Main Item 2</a></li>
+      <li><a href="#">Welcome to the Pamperin family's Care to Give page! </a></li>
       <li class="divider"></li>
       <li class="has-dropdown">
-        <a href="#">Main Item 3</a>
+        <a href="#">You are logged in as Andres Alvarez</a>
         <ul class="dropdown">
-          <li><a href="#">Dropdown Option</a></li>
-          <li><a href="#">Dropdown Option</a></li>
-          <li><a href="#">Dropdown Option</a></li>
+          <li><a href="#">View my profile</a></li>
+          <li><a href="#">Sign out</a></li>
           <li class="divider"></li>
-          <li><a href="#">See all →</a></li>
+          <!-- <li><a href="#">See all →</a></li> -->
         </ul>
       </li>
     </ul>
@@ -75,6 +75,10 @@
 <div class="row">
   <div class="large-12 columns">
     <img src="http://placehold.it/1600x600&text=Header"><br><br>
+    <h3 class = "firstHead">Thank you for visiting the Pamperin family on Care to Give!</h3> 
+    <p>John and Sue have requested that friends and family visit between the hours of noon and 4:00pm.  If you
+    would like to bring a dish to share, please use the schedule below.  They love food, but at any given time can only eat so much between the two of them! Thank you for your kindness and understanding.</p>
+    <p class = "firstHead">You can view more information about the Pamperin family <a href="http://www.caringbridge.org/visit/suepamperin">here</a>.</p>
   </div>
 </div>
 
@@ -83,29 +87,35 @@
 
 <div class="row">
 
-  <div class="large-3 panel columns">
-    <img src="http://placehold.it/500x500&text=Image">
+  <div class="large-5 panel columns">
 
-    <h4>Header</h4>
+    <h4><strong>Add your name!</strong></h4>
 
-    <p>Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p><hr>
+    <form action="demo_form.asp" method="get">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        Item: <input type="text" name="item"><br>
+        Container type (e.g., ceramic dish, Tupperware): <input type="text" name="container"><br>
+        Date you'd like to bring a meal (mm/dd/yy): <input type="text" name="item"><br>
+        <input type="submit" value="Submit">
+  </form>
 
     <div class="row">
       <div class="large-4 columns">
-        <a href="#" class="small button">Link</a>
+        <!-- <a href="#" class="small button">Link</a> -->
       </div>
 
       <div class="large-4 columns">
-        <a href="#" class="small button">Link</a>
+        <!-- <a href="#" class="small button">Link</a> -->
       </div>
 
       <div class="large-4 columns">
-        <a href="#" class="small button">Link</a>
+       <!--  <a href="#" class="small button">Link</a> -->
       </div>
     </div>
   </div>
 
-  <div class="large-9 columns">
+  <div class="large-7 columns">
     <div class="panel">
       <div class="row">
 
