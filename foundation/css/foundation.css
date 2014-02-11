@@ -5073,10 +5073,10 @@ th.hide-for-touch {
 }
 
 #calendarHeader {
-  padding: 10px;
+  padding: 10%;
 }
 
-#calendarButton {
+.daySchedule {
   padding: 2%;
 }
 

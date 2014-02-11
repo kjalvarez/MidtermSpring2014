@@ -119,27 +119,29 @@
     <div class="panel">
       <div class="row">
       <div id='calendar'>
-      
-      <script id = "calendarData" type="text/x-handlebars-template">
-
-      <header>Week of {{currentWeek}}</header>
-
-        <div class="large-3 columns" id="calendarDate">
-          <p>DATE</p>
-        </div>
-
-        <div class="large-3 columns" id="calendarGiver">
-          <p>GIVER</p>
-        </div>
-
-        <div class="large-3 columns" id="calendarFood">
-          <p>FOOD</p>
-        </div>
-
-      </script>
-      
+        <h4>Calendar</h4>
+         <script id = "calendarHeader" type="text/x-handlebars-template">
+          <header>Today is: {{dateToday}}</header>
+         </script>
       </div>
-        
+  
+        <script id = "calendarInfo" type="text/x-handlebars-template">
+          <div class='daySchedule'>
+
+              <div class="large-4 columns" id="calendarDate">
+               <p>{{date}}</p>
+              </div>
+
+
+              <div class="large-4 columns" id="calendarGiver">
+               <p>{{giver}}</p>
+              </div>
+             <div class="large-2 columns" id="calendarFood">
+              <p>{{food}}</p>
+             </div>
+          </div>
+
+       </script>      
         <!-- <div class="large-3 columns end">
           <p>TEST12</p>
         </div> -->
@@ -199,10 +201,10 @@ $(document).foundation();
 var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 </script>
-<script type="text/javascript" src="date.js"></script>
+<script type="text/javascript" src="xdate.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="midterm.js"</script>
+<script src="midterm.js"></script>
 </body>
 
 </html>
