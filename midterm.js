@@ -20,6 +20,8 @@ $(document).on('ready', function() {
 		currentDateDiv = currentDateDiv.append(mealTemplate(mealInfo));
 	}
 
+$
+
 	
 	
 });

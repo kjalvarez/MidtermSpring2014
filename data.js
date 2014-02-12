@@ -23,6 +23,41 @@ var data = [
 	{ 
 		firstName: '',
 		lastName: '',
+		item: '',
+		container: '',
+		date: (XDate.today(true)).addDays(3).toString('MMMM d')
+		
+	},
+	{ 
+		firstName: '',
+		lastName: '',
+		item: '',
+		container: '',
+		date: (XDate.today(true)).addDays(4).toString('MMMM d')
+		
+	},
+	{ 
+		firstName: '',
+		lastName: '',
+		item: '',
+		container: '',
+		date: (XDate.today(true)).addDays(5).toString('MMMM d')
+		
+	},
+	{ 
+		firstName: '',
+		lastName: '',
+		item: '',
+		container: '',
+		date: (XDate.today(true)).addDays(6).toString('MMMM d')
+		
+	},
+	{ 
+		firstName: '',
+		lastName: '',
+		item: '',
+		container: '',
+		date: (XDate.today(true)).addDays(7).toString('MMMM d')
 		
 	}
 ]
