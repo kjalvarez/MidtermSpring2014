@@ -87,7 +87,7 @@
 
 <div class="row">
 
-  <div class="large-5 panel columns">
+  <div class="large-4 panel columns">
 
     <h4><strong>Add your name!</strong></h4>
 
@@ -95,7 +95,7 @@
         First name: <input type="text" name="fname"><br>
         Last name: <input type="text" name="lname"><br>
         Item: <input type="text" name="item"><br>
-        Container type (e.g., ceramic, Tupperware): <input type="text" name="container"><br>
+        Container type (e.g., Tupperware): <input type="text" name="container"><br>
         Date you'd like to bring a meal (mm/dd/yy): <input type="text" name="item"><br>
         <input type="submit" value="Submit">
   </form>
@@ -115,7 +115,7 @@
     </div>
   </div>
 
-  <div class="large-7 columns">
+  <div class="large-8 columns">
     <div class="panel">
       <div class="row">
       <div id='calendar'>
@@ -124,7 +124,6 @@
           <header>Today is: {{dateToday}}</header>
          </script>
       </div>
-  
         <script id = "calendarTodayInfo" type="text/x-handlebars-template">
           <div class='daySchedule'>
 
@@ -160,23 +159,39 @@
           </div>
 
        </script>    
+
+       <script id = "calendarTwoDaysAhead" type="text/x-handlebars-template">
+          <div class='daySchedule'>
+
+              <div class="large-4 columns" id="calendarDate">
+               <p>{{date}}</p>
+              </div>
+
+              <div class="large-4 columns" id="calendarGiver">
+               <p>{{giver}}</p>
+              </div>
+
+             <div class="large-4 columns" id="calendarFood">
+              <p>{{food}}</p>
+             </div>
+          </div>
+
+       </script>  
         <!-- <div class="large-3 columns end">
           <p>TEST12</p>
         </div> -->
-        <button type="button" id="calendarButton">View more dates</button>
-      
     </div>
-
-    <div class="row">
+    <button type="button" id="calendarButton">View more dates</button>
+    <!-- <div class="row">
       <div class="large-6 columns">
         <div class="panel">
           <h5>Something useful</h5>
           <p>Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
           <a href="#" class="small button">Link</a>
         </div>
-      </div>
+      </div> -->
 
-      <div class="large-6 columns">
+      <!-- <div class="large-6 columns">
         <div class="panel">
           <h5>Something else useful</h5>
           <p>Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
@@ -184,7 +199,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 

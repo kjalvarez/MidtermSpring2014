@@ -27,7 +27,7 @@ var infoToday = {
 
 var infoTomorrow = {
 	date: (XDate.today(true)).addDays(1).toString('MMMM d'),
-	giver: 'Elizabeth Soloman',
+	giver: 'Elizabeth Sam',
 	food: 'Pizza Hot Dish'
 }
 
@@ -36,7 +36,16 @@ var infoTomorrow = {
 
 	tomorrowDiv=todayDiv.append(tomorrowTemplate(infoTomorrow));
 
+var infoTwoDays = {
+	date: (XDate.today(true)).addDays(2).toString('MMMM d'),
+	giver: 'Tom Jones',
+	food: 'Eggplant Casserole'
+}
 
+	var tomorrowSource = $('#calendarTwoDaysAhead').html();
+	var twoDaysTemplate = Handlebars.compile(tomorrowSource);
+
+	twoDaysDiv = tomorrowDiv.append(twoDaysTemplate(infoTwoDays));
 
 });
 
