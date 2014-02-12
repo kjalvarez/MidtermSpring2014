@@ -77,167 +77,82 @@
     <img src="http://placehold.it/1600x600&text=Header"><br><br>
     <h3 class = "firstHead">Thank you for visiting the Pamperin family on Care to Give!</h3> 
     <p>John and Sue have requested that friends and family visit between the hours of noon and 4:00pm.  If you
-    would like to bring a dish to share, please use the schedule below.  They love food, but at any given time can only eat so much between the two of them! Thank you for your kindness and understanding.</p>
-    <p class = "firstHead">You can view more information about the Pamperin family <a href="http://www.caringbridge.org/visit/suepamperin">here</a>.</p>
+      would like to bring a dish to share, please use the schedule below.  They love food, but at any given time can only eat so much between the two of them! Thank you for your kindness and understanding.</p>
+      <p class = "firstHead">You can view more information about the Pamperin family <a href="http://www.caringbridge.org/visit/suepamperin">here</a>.</p>
+    </div>
   </div>
-</div>
+  <!-- End Header -->
 
-<!-- End Header -->
-
-
-<div class="row">
-
-  <div class="large-4 panel columns">
-
-    <h4><strong>Add your name!</strong></h4>
-
-    <form action="demo_form.asp" method="get">
+  <div class="row">
+    <div class="large-4 panel columns">
+      <h4><strong>Bring a Meal</strong></h4>
+      <hr>
+      <form action="demo_form.asp" method="get">
         First name: <input type="text" name="fname"><br>
         Last name: <input type="text" name="lname"><br>
         Item: <input type="text" name="item"><br>
         Container type (e.g., Tupperware): <input type="text" name="container"><br>
-        Date you'd like to bring a meal (mm/dd/yy): <input type="text" name="item"><br>
-        <input type="submit" value="Submit">
-  </form>
+        Date (mm/dd/yy): <input type="text" name="item"><br>
+        <a href="#" class="button">Schedule It!</a>
+      </form>
+    </div>
 
-    <div class="row">
-      <div class="large-4 columns">
-        <!-- <a href="#" class="small button">Link</a> -->
-      </div>
+    <div class="large-8 columns">
+      <div class="panel">
+        <div class="row">
+          <div id='calendar'>
+            <h4>Calendar</h4>
+            <script id = "calendarHeader" type="text/x-handlebars-template">
+            <header>Today is: {{dateToday}}</header>
+            </script>
+          </div>
+          <script id = "calendarTodayInfo" type="text/x-handlebars-template">
+          <div class='daySchedule'>
 
-      <div class="large-4 columns">
-        <!-- <a href="#" class="small button">Link</a> -->
-      </div>
+          <div class="large-4 columns" id="calendarDate">
+          <p>{{date}}</p>
+          </div>
 
-      <div class="large-4 columns">
-       <!--  <a href="#" class="small button">Link</a> -->
+
+          <div class="large-4 columns" id="calendarGiver">
+          <p>{{giver}}</p>
+          </div>
+          <div class="large-4 columns" id="calendarFood">
+          <p>{{food}}</p>
+          </div>
+          </div>
+
+          </script>      
       </div>
     </div>
   </div>
+    <!-- Footer -->
 
-  <div class="large-8 columns">
-    <div class="panel">
-      <div class="row">
-      <div id='calendar'>
-        <h4>Calendar</h4>
-         <script id = "calendarHeader" type="text/x-handlebars-template">
-          <header>Today is: {{dateToday}}</header>
-         </script>
-      </div>
-        <script id = "calendarTodayInfo" type="text/x-handlebars-template">
-          <div class='daySchedule'>
+    <footer class="row">
+      <div class="large-12 columns"><hr />
+        <div class="row">
 
-              <div class="large-4 columns" id="calendarDate">
-               <p>{{date}}</p>
-              </div>
+          <div class="large-6 columns">
+            <p>Template courtesy of <a href="http://foundation.zurb.com/index.html">Zurb</a></p>
 
-
-              <div class="large-4 columns" id="calendarGiver">
-               <p>{{giver}}</p>
-              </div>
-             <div class="large-4 columns" id="calendarFood">
-              <p>{{food}}</p>
-             </div>
           </div>
 
-       </script>    
-
-       <script id = "calendarTomorrowInfo" type="text/x-handlebars-template">
-          <div class='daySchedule'>
-
-              <div class="large-4 columns" id="calendarDate">
-               <p>{{date}}</p>
-              </div>
-
-              <div class="large-4 columns" id="calendarGiver">
-               <p>{{giver}}</p>
-              </div>
-
-             <div class="large-4 columns" id="calendarFood">
-              <p>{{food}}</p>
-             </div>
-          </div>
-
-       </script>    
-
-       <script id = "calendarTwoDaysAhead" type="text/x-handlebars-template">
-          <div class='daySchedule'>
-
-              <div class="large-4 columns" id="calendarDate">
-               <p>{{date}}</p>
-              </div>
-
-              <div class="large-4 columns" id="calendarGiver">
-               <p>{{giver}}</p>
-              </div>
-
-             <div class="large-4 columns" id="calendarFood">
-              <p>{{food}}</p>
-             </div>
-          </div>
-
-       </script>  
-        <!-- <div class="large-3 columns end">
-          <p>TEST12</p>
-        </div> -->
-    </div>
-    <button type="button" id="calendarButton">View more dates</button>
-    <!-- <div class="row">
-      <div class="large-6 columns">
-        <div class="panel">
-          <h5>Something useful</h5>
-          <p>Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
-          <a href="#" class="small button">Link</a>
-        </div>
-      </div> -->
-
-      <!-- <div class="large-6 columns">
-        <div class="panel">
-          <h5>Something else useful</h5>
-          <p>Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros.</p>
-          <a href="#" class="small button">Link</a>
         </div>
       </div>
-    </div>
-  </div> -->
+    </footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    <script src='foundation/js/foundation.min.js'></script>
+    <script>
+    $(document).foundation();
 
-</div>
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+    <script type="text/javascript" src="xdate.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src='data.js'></script>
+    <script src="midterm.js"></script>
+  </body>
 
-<!-- Footer -->
-
-<footer class="row">
-  <div class="large-12 columns"><hr />
-    <div class="row">
-
-      <div class="large-6 columns">
-        <p>Template courtesy of <a href="http://foundation.zurb.com/index.html">Zurb</a></p>
-
-      </div>
-
-      <div class="large-6 columns">
-        <ul class="inline-list right">
-          <!-- <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li> -->
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</footer>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
-<script src='foundation/js/foundation.min.js'></script>
-<script>
-$(document).foundation();
-
-var doc = document.documentElement;
-doc.setAttribute('data-useragent', navigator.userAgent);
-</script>
-<script type="text/javascript" src="xdate.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="midterm.js"></script>
-</body>
-
-</html>
+  </html>

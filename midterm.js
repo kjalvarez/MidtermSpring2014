@@ -31,7 +31,7 @@ var infoTomorrow = {
 	food: 'Pizza Hot Dish'
 }
 
-	var tomorrowSource = $('#calendarTomorrowInfo').html();
+	var tomorrowSource = $('#calendarTodayInfo').html();
 	var tomorrowTemplate = Handlebars.compile(tomorrowSource);
 
 	tomorrowDiv=todayDiv.append(tomorrowTemplate(infoTomorrow));
@@ -42,7 +42,7 @@ var infoTwoDays = {
 	food: 'Eggplant Casserole'
 }
 
-	var tomorrowSource = $('#calendarTwoDaysAhead').html();
+	var tomorrowSource = $('#calendarTodayInfo').html();
 	var twoDaysTemplate = Handlebars.compile(tomorrowSource);
 
 	twoDaysDiv = tomorrowDiv.append(twoDaysTemplate(infoTwoDays));
@@ -54,16 +54,3 @@ var infoTwoDays = {
 
 
 
-
-
-
-var appointment = function(firstName, lastName, foodItem, container, month, day, year) {
-	this.firstName= firstName;
-	this.lastName=lastName;
-	this.foodItem=foodItem;
-	this.container=container;
-	this.month=month;
-	this.day=day;
-	this.year=year;
-
-}
