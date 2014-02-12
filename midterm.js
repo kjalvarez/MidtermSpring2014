@@ -34,9 +34,11 @@ $('#submitButton').on('click', function (e) {
 				data[i].item=($('#itemInput').val());
 				data[i].container=($('#containerInput').val());
 				console.log(data[i]);
-			};
-		};
+			} 
+			}
+		 
 });
+
 
 });
 
