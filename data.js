@@ -19,5 +19,10 @@ var data = [
 		item: 'Eggplant Casserole',
 		container: 'Red plastic bowl',
 		date: (XDate.today(true)).addDays(2).toString('MMMM d')
+	},
+	{ 
+		firstName: '',
+		lastName: '',
+		
 	}
 ]

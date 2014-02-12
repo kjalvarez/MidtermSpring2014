@@ -106,19 +106,19 @@
             <header>Today is: {{dateToday}}</header>
             </script>
           </div>
-          <script id = "calendarTodayInfo" type="text/x-handlebars-template">
+          <script id = "calendarMealInfo" type="text/x-handlebars-template">
           <div class='daySchedule'>
 
           <div class="large-4 columns" id="calendarDate">
           <p>{{date}}</p>
           </div>
 
-
           <div class="large-4 columns" id="calendarGiver">
-          <p>{{giver}}</p>
+          <p>{{firstName}} {{lastName}}</p>
           </div>
+
           <div class="large-4 columns" id="calendarFood">
-          <p>{{food}}</p>
+          <p>{{item}}({{container}})</p>
           </div>
           </div>
 
