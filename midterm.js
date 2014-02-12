@@ -15,16 +15,26 @@ console.log(newDiv);
 	var currentDateDiv = $('#calendar').append(newDiv) 
 
 var infoToday = {
-	date: (XDate.today(true)).toDateString(),
+	date: (XDate.today(true)).toString('MMMM d'),
 	giver: 'Jim Smith',
 	food: 'Lasagna',
 
 }
-	var todaySource=$('#calendarInfo').html();
+	var todaySource=$('#calendarTodayInfo').html();
 	var todayTemplate=Handlebars.compile(todaySource);
 
 	todayDiv = currentDateDiv.append(todayTemplate(infoToday));
 
+var infoTomorrow = {
+	date: (XDate.today(true)).addDays(1).toString('MMMM d'),
+	giver: 'Elizabeth Soloman',
+	food: 'Pizza Hot Dish'
+}
+
+	var tomorrowSource = $('#calendarTomorrowInfo').html();
+	var tomorrowTemplate = Handlebars.compile(tomorrowSource);
+
+	tomorrowDiv=todayDiv.append(tomorrowTemplate(infoTomorrow));
 
 
 
