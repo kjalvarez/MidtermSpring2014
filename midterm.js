@@ -20,7 +20,20 @@ $(document).on('ready', function() {
 		currentDateDiv = currentDateDiv.append(mealTemplate(mealInfo));
 	}
 
-$
+$('#submitButton').on('click', function (e) {
+	e.preventDefault;
+	var requestedDate = ($('#dateInput').val());
+	console.log(requestedDate);
+
+	for(i=0; i<data.length; i++) {
+		if (requestedDate===data[i].date &&
+		data[i].firstName==='') {
+			
+
+
+		}
+	}
+})
 
 	
 	
