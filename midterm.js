@@ -34,8 +34,14 @@ $('#submitButton').on('click', function (e) {
 				data[i].item=($('#itemInput').val());
 				data[i].container=($('#containerInput').val());
 				console.log(data[i]);
+
+				
 			} 
 			}
+
+	Write a fx to re-render page with new array . . . ?
+
+	}
 		 
 });
 
