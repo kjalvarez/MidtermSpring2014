@@ -20,8 +20,7 @@ $(document).on('ready', function() {
 		currentDateDiv = currentDateDiv.append(mealTemplate(mealInfo));
 	}
 
-	NEXT STEP: GIVE DATES W/ NO MEAL A BLANK VALUE; SCHEDULE MEAL IF BLANK.  
-
+	
 	
 });
 
