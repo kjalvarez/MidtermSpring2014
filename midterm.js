@@ -1,3 +1,11 @@
+function clearFields() {
+	$('#firstNameInput').val('');
+	$('#lastNameInput').val('');
+	$('#itemInput').val('');
+	$('#containerInput').val('');
+	$('#dateInput').val('');
+}
+
 function renderCalendar(currentDateDiv) {
 	$('.daySchedule').remove();
 	for (i=0; i<data.length; i++) {
@@ -6,7 +14,7 @@ function renderCalendar(currentDateDiv) {
 		var mealTemplate=Handlebars.compile(mealSource);
 		currentDateDiv = currentDateDiv.append(mealTemplate(mealInfo));
 		$('#errorMessage').hide();
-		
+		clearFields();
 	}
 }
 
