@@ -3,6 +3,7 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="foundation/css/foundation.css">
   <link rel="stylesheet" type="text/css" href="foundation/css/normalize.css">
   <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
@@ -77,83 +78,86 @@
     <img id= "headPhoto" src="http://www.lakshyaworld.com/_wizardimages/banner_food.jpg"><br><br>
     <h3 class = "firstHead">Thank you for visiting the Pamperin family on Care to Give!</h3> 
     <p>John and Sue have requested that friends and family visit between the hours of noon and 4:00pm.  If you would like to bring a dish to share, please use the schedule below.  They love food, but at any given time can only eat so much between the two of them! Thank you for your kindness and understanding.</p>
-      <p class = "firstHead">You can view more information about the Pamperin family <a href="http://www.caringbridge.org/visit/suepamperin">here</a>.</p>
-    </div>
+    <p class = "firstHead">You can view more information about the Pamperin family <a href="http://www.caringbridge.org/visit/suepamperin">here</a>.</p>
   </div>
-  <!-- End Header -->
+</div>
+<!-- End Header -->
 
-  <div class="row">
-    <div class="large-4 panel columns">
-      <h4><strong>Bring a Meal</strong></h4>
-      <hr>
-      <form action="demo_form.asp" method="get">
-        First name: <input type="text" name="fname" id="firstNameInput"><br>
-        Last name: <input type="text" name="lname" id="lastNameInput"><br>
-        Item: <input type="text" name="item" id='itemInput'><br>
-        Container type (e.g., Tupperware): <input type="text" name="container" id='containerInput'><br>
-        Date (format example: January 3): <input type="text" name="item" id='dateInput'><br>
-        <a href="#" id="submitButton" class="button">Schedule It!</a>
-      </form>
-    </div>
+<div class="row">
+  <div class="large-4 panel columns">
+    <h4><strong>Bring a Meal</strong></h4>
+    <hr>
+    <form action="demo_form.asp" method="get">
+      First name: <input type="text" name="fname" id="firstNameInput"><br>
+      Last name: <input type="text" name="lname" id="lastNameInput"><br>
+      Item: <input type="text" name="item" id='itemInput'><br>
+      Container type (e.g., Tupperware): <input type="text" name="container" id='containerInput'><br>
+      Date (format example: January 3): <input type="text" name="item" id='dateInput'><br>
+      <a href="#" id="submitButton" class="button">Schedule It!</a>
+    </form>
+  </div>
 
-    <div class="large-8 columns">
-      <div class="panel">
-        <div class="row">
-          <div id='calendar'>
-            <h4>Calendar</h4>
-            <hr>
-            <script id = "calendarHeader" type="text/x-handlebars-template">
-            <header>Today is: {{dateToday}}</header>
-            <hr>
-            </script>
-          </div>
-          <script id = "calendarMealInfo" type="text/x-handlebars-template">
-          <div class='row daySchedule'>
+  <div class="large-8 columns">
+    <div class="panel">
+      <div class="row">
+        <div id='calendar'>
+          <h4>Calendar</h4>
+          <hr>
+          <script id = "calendarHeader" type="text/x-handlebars-template">
+          <header>Today is: {{dateToday}}</header>
+          <hr>
+          </script>
+        </div>
+        <script id = "calendarMealInfo" type="text/x-handlebars-template">
+        <div class='row daySchedule'>
 
           <div class="large-4 columns" id="calendarDate">
-          <p>{{date}}</p>
+            <p>{{date}}</p>
           </div>
 
           <div class="large-4 columns" id="calendarGiver">
-          <p>{{firstName}} {{lastName}}</p>
+            <p>{{firstName}} {{lastName}}</p>
           </div>
 
           <div class="large-4 columns" id="calendarFood">
-          <p>{{item}}</p>
+              <p>{{item}}</p>
           </div>
-          </div>
+        </div>
 
-          </script>      
+        </script>      
       </div>
     </div>
   </div>
-    <!-- Footer -->
+  <!-- Footer -->
 
-    <footer class="row">
-      <div class="large-12 columns"><hr />
-        <div class="row">
+  <footer class="row">
+    <div class="large-12 columns"><hr />
+      <div class="row">
 
-          <div class="large-6 columns">
-            <p>Template courtesy of <a href="http://foundation.zurb.com/index.html">Zurb</a></p>
-
-          </div>
+        <div class="large-6 columns">
+          <p>Template courtesy of <a href="http://foundation.zurb.com/index.html">Zurb</a></p>
 
         </div>
+
       </div>
-    </footer>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
-    <script src='foundation/js/foundation.min.js'></script>
-    <script>
-    $(document).foundation();
+    </div>
+  </footer>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+  <script src='foundation/js/foundation.min.js'></script>
+  <script>
+  $(document).foundation();
 
-    var doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
-    </script>
-    <script type="text/javascript" src="xdate.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src='data.js'></script>
-    <script src="midterm.js"></script>
-  </body>
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+  </script>
 
-  </html>
+  <script type="text/javascript" src="xdate.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <script src='data.js'></script>
+  <script src="midterm.js"></script>
+
+</body>
+
+</html>
