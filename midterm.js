@@ -6,21 +6,28 @@ function clearFields() {
 	$('#dateInput').val('');
 }
 
-function renderCalendar(currentDateDiv) {
+function renderCalendar(div) {
 	$('.daySchedule').remove();
 	for (i=0; i<data.length; i++) {
 		var mealInfo = data[i];
 		var mealSource=$('#calendarMealInfo').html();
 		var mealTemplate=Handlebars.compile(mealSource);
-		currentDateDiv = currentDateDiv.append(mealTemplate(mealInfo));
+		div = div.append(mealTemplate(mealInfo));
 		$('#errorMessage').hide();
 		clearFields();
 	}
 }
 
+function getValues(array) {
+	array[i].firstName=($('#firstNameInput').val());
+	array[i].lastName=($('#lastNameInput').val());
+	array[i].item=($('#itemInput').val());
+	array[i].container=($('#containerInput').val());
+}
+
 $(document).on('ready', function() {
 
-	$("#dateInput").datepicker({ dateFormat: "MM d"});
+	$("#dateInput").datepicker({ minDate: 0, maxDate: "+7D" },{ dateFormat: "MM d"});
 
 	var date = {
 		dateToday: (XDate.today(true)).toString('dddd, MMMM d')
@@ -43,11 +50,7 @@ $(document).on('ready', function() {
 
 		for(i=0; i<data.length; i++) {
 			if (requestedDate===data[i].date.toString('MMMM dd') && data[i].firstName==='') {
-				data[i].firstName=($('#firstNameInput').val());
-				data[i].lastName=($('#lastNameInput').val());
-				data[i].item=($('#itemInput').val());
-				data[i].container=($('#containerInput').val());
-				console.log(data[i]);
+				getValues(data);
 				renderCalendar(currentDateDiv);
 				mealAssigned = true;
 				break; 
@@ -56,10 +59,7 @@ $(document).on('ready', function() {
 
 		if (!mealAssigned) {
 			$('#errorMessage').show();
-				}
-			
-		
-
+		}
 	});
 });
 
