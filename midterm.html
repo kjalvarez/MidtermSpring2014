@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="foundation/css/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
 
-
     <title>Demo</title>
   </head>
   <!-- Navigation --> 
@@ -95,11 +94,14 @@
         Item: <input type="text" name="item" id='itemInput'><br>
         Container type: <input type="text" name="container" id='containerInput'><br>
         Date: <input type="text" name="item" id='dateInput'><br>
-        <a href="#" id="submitButton" class="button">Schedule It!</a>
+        <div id="submitBox"><a href="#" id="submitButton" class="button">Schedule It!</a>
+        </div>
+        <div id = "errorMessage">Please pick another date.</div>
       </form>
+
     </div>
 
-   
+
 
     <div class="large-9 columns" class = 'calendarStyle'>
       <div class="panel calendarStyle">
@@ -150,12 +152,7 @@
   </footer>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
   <script src='foundation/js/foundation.min.js'></script>
-  <script>
-    $(document).foundation();
-
-    var doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
-  </script>
+ 
 
   <script type="text/javascript" src="xdate.js"></script>
   <script src="foundation/js/foundation/foundation.alerts.js"></script>

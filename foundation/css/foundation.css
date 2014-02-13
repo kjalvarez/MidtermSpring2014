@@ -5098,6 +5098,7 @@ th.hide-for-touch {
 
 #submitButton {
   background-color: #CD4F39;
+  
 }
 
 #calendarDateStyle {
@@ -5105,8 +5106,17 @@ th.hide-for-touch {
   text-decoration: underline;
 }
 
+#errorMessage {
+  color: red;
+}
 
+#submitButton:hover {
+  background-color: orange;
+}
 
+#submitBox {
+  text-align: center;
+}
 
 
 

@@ -5,6 +5,8 @@ function renderCalendar(currentDateDiv) {
 		var mealSource=$('#calendarMealInfo').html();
 		var mealTemplate=Handlebars.compile(mealSource);
 		currentDateDiv = currentDateDiv.append(mealTemplate(mealInfo));
+		$('#errorMessage').hide();
+		
 	}
 }
 
@@ -45,8 +47,10 @@ $(document).on('ready', function() {
 		}
 
 		if (!mealAssigned) {
-			alert('Please select a valid date.')
-		}
+			$('#errorMessage').show();
+				}
+			
+		
 
 	});
 });
