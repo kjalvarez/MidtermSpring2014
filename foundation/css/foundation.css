@@ -5099,3 +5099,8 @@ th.hide-for-touch {
 #submitButton {
   background-color: #CD4F39;
 }
+
+#calendarDateStyle {
+  font-style: italic;
+  text-decoration: underline;
+}
