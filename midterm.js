@@ -32,7 +32,7 @@ $(document).on('ready', function() {
 		var mealAssigned = false;
 
 		for(i=0; i<data.length; i++) {
-			if (requestedDate===data[i].date.toString() && data[i].firstName==='') {
+			if (requestedDate===data[i].date.toString('MMMM dd') && data[i].firstName==='') {
 				data[i].firstName=($('#firstNameInput').val());
 				data[i].lastName=($('#lastNameInput').val());
 				data[i].item=($('#itemInput').val());
@@ -45,7 +45,7 @@ $(document).on('ready', function() {
 		}
 
 		if (!mealAssigned) {
-			alert('Please enter another date.');
+			alert('Please select a valid date.')
 		}
 
 	});
