@@ -5088,3 +5088,14 @@ th.hide-for-touch {
   margin-top: 5%;
 }
 
+.calendarStyle {
+  background-color: #FFFFE0;
+}
+
+#scheduleStyle {
+  background-color: #C5E3BF;
+}
+
+#submitButton {
+  background-color: #CD4F39;
+}
