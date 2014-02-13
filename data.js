@@ -37,10 +37,10 @@ var data = [
 
 },
 { 
-	firstName: '',
-	lastName: '',
-	item: '',
-	container: '',
+	firstName: 'Bill',
+	lastName: 'Humphrey',
+	item: 'Meatloaf',
+	container: 'Metal pan',
 	date: XDate.today(true).addDays(5)
 
 },
