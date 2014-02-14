@@ -1064,7 +1064,7 @@ meta.foundation-mq-topbar {
         padding-right: 25px;
         color: white;
         position: relative; }
-        .top-bar .toggle-topbar.menu-icon a::after {
+        .top-bar .toggle-topbar.menu-icon /*a::after*/ {
           content: "";
           position: absolute;
           right: 0;
