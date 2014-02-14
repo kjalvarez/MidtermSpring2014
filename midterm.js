@@ -27,7 +27,7 @@ function getValues(array) {
 
 $(document).on('ready', function() {
 
-	$("#dateInput").datepicker({ minDate: 0, maxDate: "+7D" },{ dateFormat: "MM d"});
+	$("#dateInput").datepicker({ minDate: 0, maxDate: "+7D", dateFormat: "MM d" });
 
 	var date = {
 		dateToday: (XDate.today(true)).toString('dddd, MMMM d')
