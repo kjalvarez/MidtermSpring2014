@@ -8,7 +8,7 @@ function clearFields() {
 
 function renderCalendar(div) {
 	$('.daySchedule').remove();
-	for (i=0; i<data.length; i++) {
+	for(var i=0; i<data.length; i++) {
 		var mealInfo = data[i];
 		var mealSource=$('#calendarMealInfo').html();
 		var mealTemplate=Handlebars.compile(mealSource);
@@ -42,13 +42,13 @@ $(document).on('ready', function() {
 	renderCalendar(currentDateDiv);
 
 	$('#submitButton').on('click', function (e) {
-		e.preventDefault;
+		e.preventDefault();
 		var requestedDate = ($('#dateInput').val());
 		console.log(requestedDate);
 
 		var mealAssigned = false;
 
-		for(i=0; i<data.length; i++) {
+		for(var i=0; i<data.length; i++) {
 			if (requestedDate===data[i].date.toString('MMMM dd') && data[i].firstName==='') {
 				getValues(data);
 				renderCalendar(currentDateDiv);
