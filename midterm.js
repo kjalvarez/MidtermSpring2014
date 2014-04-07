@@ -8,7 +8,7 @@ function clearFields() {
 
 function renderCalendar(div) {
 	$('.daySchedule').remove();
-	for(var i=0; i<data.length; i++) {
+	for(var i = 0; i<data.length; i++) {
 		var mealInfo = data[i];
 		var mealSource=$('#calendarMealInfo').html();
 		var mealTemplate=Handlebars.compile(mealSource);
@@ -18,11 +18,11 @@ function renderCalendar(div) {
 	}
 }
 
-function getValues(array) {
-	array[i].firstName=($('#firstNameInput').val());
-	array[i].lastName=($('#lastNameInput').val());
-	array[i].item=($('#itemInput').val());
-	array[i].container=($('#containerInput').val());
+function getValues(foodObject) { 
+	foodObject.firstName=($('#firstNameInput').val());
+	foodObject.lastName=($('#lastNameInput').val());
+	foodObject.item=($('#itemInput').val());
+	foodObject.container=($('#containerInput').val());
 }
 
 $(document).on('ready', function() {
@@ -45,12 +45,13 @@ $(document).on('ready', function() {
 		e.preventDefault();
 		var requestedDate = ($('#dateInput').val());
 		console.log(requestedDate);
+		
 
 		var mealAssigned = false;
 
-		for(var i=0; i<data.length; i++) {
-			if (requestedDate===data[i].date.toString('MMMM dd') && data[i].firstName==='') {
-				getValues(data);
+		for(var i = 0; i<data.length; i++) {
+			if (requestedDate===data[i].date.toString('MMMM d') && data[i].firstName==='') {
+				getValues(data[i]);
 				renderCalendar(currentDateDiv);
 				mealAssigned = true;
 				break; 

@@ -63,6 +63,8 @@ var data = [
 ]
 
 Handlebars.registerHelper('date', function() {
-	return data[i].date.toString('dddd, MMMM d')
+	return this.date.toString('dddd, MMMM d')
 })
+
+
 
